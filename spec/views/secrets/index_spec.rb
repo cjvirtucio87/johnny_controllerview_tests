@@ -59,9 +59,9 @@ describe "secrets/index.html.erb" do
       secrets = [secret, create(:secret, :with_attributes)]
       assign(:secrets, secrets)
 
-      render
-      save_and_output_page
-      expect(rendered).to have_selector("a[href='#{session_path}']", text: "Logout")
+      render template: 'secrets/index', layout: 'layouts/application'
+      
+      expect(rendered).to match(/Logout/)
     end
   end
 end
