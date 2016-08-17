@@ -46,6 +46,7 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy'
+  gem 'guard-rspec', require: false
 end
 
 # Use unicorn as the app server
@@ -56,4 +57,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
