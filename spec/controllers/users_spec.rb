@@ -27,19 +27,4 @@ describe UsersController do
 
   end
 
-  context 'when the user is logged in' do
-
-    before do
-      session[:user_id] = user.id
-    end
-
-    # it "should " do
-
-
-
-    # end
-
-  end
-
-
 end
