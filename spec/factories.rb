@@ -2,12 +2,26 @@ FactoryGirl.define do
 
   factory :user do
     trait :with_attributes do
-      sequence(:name){ |n| "Mike#{n}"}
-      email "#{name}@gmail.com"
+      name "Mike"
+      email "mike@gmail.com"
       password "asdfasdf"
     end
 
     trait :without_attributes do
+    end
+
+    trait :invalid_attributes do
+      name ""
+      email ""
+      password ""
+    end
+
+    trait :for_controller do
+      name "Mike"
+      sequence :email do |n|
+        "mike#{n}@gmail.com"
+      end
+      password "asdfasdf"
     end
 
   end
